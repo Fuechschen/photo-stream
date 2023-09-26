@@ -14,7 +14,7 @@
 #
 # Site settings
 # These are used to personalize your new site and can be found in the .env file.
-# If you look in the HTML files, you will see them accessed via {{ site.env.TITLE }}, 
+# If you look in the HTML files, you will see them accessed via {{ site.env.TITLE }},
 # {{ site.env.EMAIL }}, and so on. You can create any custom variable you would like,
 # and they will be accessible in the templates via {{ site.env.MYVARIABLE }}.
 #
@@ -26,13 +26,31 @@ image_processing:
   large:
     source: photos/original
     destination: photos/large
-    resize_to_limit: [2048, 2048]
+    resize_to_limit: [ null, 2048]
+    saver:
+      strip: true
+  medium:
+    source: photos/original
+    destination: photos/medium
+    resize_to_limit: [ null, 1024 ]
+    saver:
+      strip: true
+  small:
+    source: photos/original
+    destination: photos/small
+    resize_to_limit: [ null, 768 ]
+    saver:
+      strip: true
+  tiny:
+    source: photos/original
+    destination: photos/tiny
+    resize_to_limit: [ null, 420 ]
     saver:
       strip: true
   thumbnail:
     source: photos/original
     destination: photos/thumbnail
-    resize_to_limit: [640, 640]
+    resize_to_limit: [ null, 640]
     saver:
       strip: true
   tint:
