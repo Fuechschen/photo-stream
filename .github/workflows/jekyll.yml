@@ -58,7 +58,9 @@ jobs:
         run:
           # we only need the library
           sudo apt-get install --fix-missing -qq -o Acquire::Retries=3
-          libvips
+          libvips libimage-exiftool-perl perl-doc
+
+      - run: exiftool "-gps*=" -overwrite_original photos/original
 
 
       - name: Build with Jekyll
