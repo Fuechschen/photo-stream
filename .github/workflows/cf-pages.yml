@@ -60,7 +60,7 @@ jobs:
           sudo apt-get install --fix-missing -qq -o Acquire::Retries=3
           libvips libimage-exiftool-perl perl-doc
 
-      - run: exiftool "-gps*=" -overwrite_original photos/original
+      - run: exiftool "-gps*=" -overwrite_original src/photos/original
 
 
       - name: Build with Jekyll
