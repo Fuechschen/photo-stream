@@ -1,6 +1,9 @@
 ---
 ---
 
+@import url(font-awesome.css);
+@import url(source-sans-3.css);
+
 * {
 	padding: 0;
 	margin: 0;
@@ -35,7 +38,7 @@
 	// @include dark {
 	// 	background-color: rgba(0, 0, 0, .25);
 	// }
-	
+
 	&:hover {
 		background-color: rgba(200, 200, 200, .5);
 		// Disable until Safari supports `prefers-color-scheme` in SVG's
@@ -43,7 +46,7 @@
 		// 	background-color: rgba(0, 0, 0, .5);
 		// }
 	}
-	
+
 	&:active {
 		background-color: rgba(200, 200, 200, .25);
 		// Disable until Safari supports `prefers-color-scheme` in SVG's
@@ -51,8 +54,8 @@
 		// 	background-color: rgba(0, 0, 0, .75);
 		// }
 	}
-	
-	
+
+
 }
 
 body,
@@ -61,7 +64,9 @@ html {
 }
 
 body {
-	font: 16px/24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	//font: 16px/24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font: inherit;
+	font-family: "Source Sans 3", Helvetica, sans-serif;
 	background: #fff;
 	color: #2e2f30;
 
@@ -194,13 +199,13 @@ main {
 			display: none;
 			align-items: center;
 			justify-content: center;
-			
+
 			span {
 				@include button;
 				background-image: url(../img/icon-left.svg);
 				pointer-events: none;
 			}
-			
+
 			&:hover,
 			&:focus {
 				span {
@@ -226,7 +231,7 @@ main {
 		.next {
 			right: 0;
 			left: auto;
-			
+
 			span {
 				background-image: url(../img/icon-right.svg);
 			}
@@ -240,7 +245,7 @@ main {
 			color: #fff;
 			text-shadow: #000 0 1px 1px, #000 0 2px 4px;
 			opacity: .5;
-		
+
 			li {
 				margin-right: 12px;
 
@@ -271,7 +276,7 @@ main {
 				}
 			}
 		}
-		
+
 		// PHOTO DETAIL
 
 		&.target {
@@ -324,7 +329,7 @@ main {
 				bottom: 0;
 				left: 0;
 				animation: fade-in .5s ease-out;
-				
+
 				span {
 					flex-grow: 1;
 					background-size: contain;
@@ -339,7 +344,7 @@ main {
 
 			.photoview-button {
 				height: 75px;
-				
+
 				span {
 
 					&:focus,
@@ -382,14 +387,14 @@ main {
 		top: 24px;
 		{% endif %}
 	}
-	
+
 	li {
 		margin-left: 8px;
-		
+
 		a {
 			@include button;
 		}
-		
+
 		&.github {
 			a {
 				background-image: url(../img/icon-github.svg);
@@ -407,7 +412,7 @@ main {
 				background-image: url(../img/icon-instagram.svg);
 			}
 		}
-		
+
 		&.rss {
 			a {
 				background-image: url(../img/icon-rss.svg);
@@ -432,7 +437,7 @@ main {
 				background-image: url(../img/icon-download.svg);
 			}
 		}
-		
+
 		&.link {
 			a {
 				text-indent: 0;
@@ -460,23 +465,23 @@ main {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	
+
 	img {
 		width: 64px;
 		vertical-align: bottom;
 		margin-bottom: 24px;
 	}
-	
+
 	h1 {
 		font-size: 32px;
 		line-height: 48px;
 		font-weight: 700;
 	}
-	
+
 	p {
 		margin-bottom: 32px;
 	}
-	
+
 	a {
 		@include button;
 		text-indent: 0;
@@ -521,21 +526,21 @@ main {
 				width: 100%;
 				height: auto;
 			}
-			
+
 			.previous,
 			.next {
 				width: 25vw;
 				max-width: auto;
-				
+
 				span {
 					display: none;
 				}
 			}
-			
+
 			.previous {
 				cursor: w-resize;
 			}
-			
+
 			.next {
 				cursor: e-resize;
 			}

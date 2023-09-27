@@ -80,3 +80,6 @@ image_processing:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude: [Dockerfile, LICENSE, docker-compose.yml, README.md, Procfile]
+
+source: src
+disable_disk_cache: true
