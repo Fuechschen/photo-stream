@@ -21,7 +21,11 @@
              {{ safe_name | processed_path: 'small' }} 768w,
              {{ safe_name | processed_path: 'thumbnail' }} 640w,
              {{ safe_name | processed_path: 'tiny' }} 420w"
-         sizes="90vw" src="{{ safe_name | processed_path: 'tint' }}" height="{{ image_path | exif: 'height'}}" width="{{ image_path | exif: 'width'}}" />
+         sizes="90vw"
+         src="{{ safe_name | processed_path: 'tint' }}"
+         height="{{ image_path | exif: 'height'}}"
+         width="{{ image_path | exif: 'width'}}"
+         alt="{{ slug }}" />
     <span class="full">
         <img class="lazyload" data-src="{{ safe_name | processed_path: 'small' }}" src="{{ safe_name | processed_path: 'tiny' }}"
              data-srcset="{{ safe_name | processed_path: 'humongous' }} 4096w,
@@ -32,6 +36,7 @@
              {{ safe_name | processed_path: 'thumbnail' }} 640w,
              {{ safe_name | processed_path: 'tiny' }} 420w"
              sizes="90vw"
+             alt="{{ slug }}"
         >
     </span>
     <a class="open" href="{{ slug | relative_url  }}" data-target="id-{{ slug }}">Open</a>
