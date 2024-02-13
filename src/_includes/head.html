@@ -20,7 +20,7 @@
 	<meta name="twitter:description" content="{{ site.env.DESCRIPTION }}">
 	<meta name="twitter:image:src" content="{{ site.env.URL }}{{ page.images[0].name | uri_escape | processed_path: 'large' | default: 'social-preview.png' }}">
 	<meta name="description" content="{{ site.env.DESCRIPTION }}">
-	<script type="text/javascript" src="{{ '/js/lazy-loading.js' | relative_url }}"></script>
+	<script type="text/javascript" src="{{ '/js/lazy-loading.js' | relative_url }}" defer></script>
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ '/css/master.css' | relative_url }}" />
 	{% if site.env.ALLOW_IMAGE_SHARING == "1" %}
 	<link rel="stylesheet" type="text/css" href="{{ '/css/toastify.min.css' | relative_url }}">
