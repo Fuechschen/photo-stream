@@ -1,0 +1,22 @@
+variables:
+  JEKYLL_ENV: production
+
+stages:
+  - publish
+
+build:
+  image: 3.1-bookworm
+  stage: publish
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  artifacts:
+    paths:
+      - public
+  script:
+    - sudo apt-get update -qq -o Acquire::Retries=3
+    - sudo apt-get install --fix-missing -qq -o Acquire::Retries=3 libvips libimage-exiftool-perl perl-doc
+    - exiftool "-gps*=" -overwrite_original src/photos/original
+    - gem install bundler
+    - bundle install
+    - bundle exec jekyll build --baseurl "$CI_PAGES_URL" -d public
+
