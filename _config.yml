@@ -25,7 +25,7 @@ plugins:
 image_processing:
   original:
     source: photos/original
-    destination: photos/original
+    destination: photos/source
     saver:
       strip: true
   humongous:
