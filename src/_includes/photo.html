@@ -25,8 +25,8 @@
              {{ safe_name | processed_path: 'tiny' }} 420w"
          sizes="100vw"
          src="{{ safe_name | processed_path: 'tint' }}"
-         height="{{ image_path | exif: 'height'}}"
-         width="{{ image_path | exif: 'width'}}"
+         height="{{ image_path | exif: 'imageHeight'}}"
+         width="{{ image_path | exif: 'imageWidth'}}"
          alt="{{ slug }}"
          data-sourcelink="{{ safe_name | processed_path: 'source' }}"/>
     <!-- <span class="full">
