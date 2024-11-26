@@ -18,5 +18,5 @@ pages:
     - exiftool "-gps*=" -overwrite_original src/photos/original
     - gem install bundler
     - bundle install
-    - bundle exec jekyll build --baseurl "$CI_PAGES_URL" -d public
+    - bundle exec jekyll build --baseurl "/" -d public
 
