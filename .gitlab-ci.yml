@@ -5,7 +5,7 @@ stages:
   - publish
 
 build:
-  image: 3.1-bookworm
+  image: ruby:3.1-bookworm
   stage: publish
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
