@@ -23,6 +23,12 @@ plugins:
   - jekyll-dotenv
 
 image_processing:
+  original:
+    source: photos/original
+    destination: photos/original
+    resize_to_limit: [ null, 4096 ]
+    saver:
+      strip: true
   humongous:
     source: photos/original
     destination: photos/humongous
