@@ -13,8 +13,8 @@ build:
     paths:
       - public
   script:
-    - sudo apt-get update -qq -o Acquire::Retries=3
-    - sudo apt-get install --fix-missing -qq -o Acquire::Retries=3 libvips libimage-exiftool-perl perl-doc
+    - apt-get update -qq -o Acquire::Retries=3
+    - apt-get install --fix-missing -qq -o Acquire::Retries=3 libvips libimage-exiftool-perl perl-doc
     - exiftool "-gps*=" -overwrite_original src/photos/original
     - gem install bundler
     - bundle install
