@@ -23,7 +23,7 @@ plugins:
   - jekyll-dotenv
 
 image_processing:
-  original:
+  source:
     source: photos/original
     destination: photos/source
     saver:
